@@ -6,7 +6,7 @@ from loader import dp
 
 @dp.message_handler(Command('search')) # /qidiruv
 async def search_bot(message: types.Message, state: FSMContext):
-    await message.answer("🔍Qidirayotgan shaharingiz nomini kiriting: ")
+    await message.answer("🔍Qidirayotgan joyingiz nomini kiriting: ")
     await state.set_state('searchstate')
 
 @dp.message_handler(state='searchstate')

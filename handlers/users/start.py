@@ -9,7 +9,7 @@ from loader import dp
 @dp.message_handler(commands='menu')
 async def bot_start(message: types.Message):
     await message.answer(f"Salom, {message.from_user.full_name}!\n"\
-                         f"Ob-Xavo ma'lumotlarini bilish uchun shaharni tanlang:", reply_markup=menubtn)
+                         f"Ob-Xavo ma'lumotlarini bilish uchun joyni tanlang:", reply_markup=menubtn)
 
 @dp.callback_query_handler()
 async def weatherstart(call: types.CallbackQuery):
