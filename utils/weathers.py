@@ -32,9 +32,10 @@ async def weatherbot(text):
     quyosh_botishi = datetime.datetime.fromtimestamp(data["sys"]["sunset"])
     kunning_uzunligi = datetime.datetime.fromtimestamp(data["sys"]["sunset"]) - datetime.datetime.fromtimestamp(data["sys"]["sunrise"])
 
-    text = f"Xozirgi Vaqt Bo'yicha ({datetime.datetime.now().strftime('%Y-%m-%d %H:%M')})\n\n"\
-		   f"{shahar} Shahar ob-havosi!\nHarorat: {harorat}°C {icon}\n"\
+    text = f"Hozirgi vaqt bo'yicha ({datetime.datetime.now().strftime('%Y-%m-%d %H:%M')})\n\n"\
+		   f"{shahar} ob-havosi!\nHarorat: {harorat}°C\n{icon}\n"\
 		   f"Namlik: {namlik}%\nBosim: {bosim} mm.sim.ust\nShamol: {shamol} m/s\n"\
-		   f"Quyosh Chiqishi: {quyosh_chiqishi}\nQuyosh Botishi: {quyosh_botishi}\nKunning Uzunligi: {kunning_uzunligi}\n"
+		   f"Quyosh Chiqishi: {quyosh_chiqishi}\nQuyosh Botishi: {quyosh_botishi}\n"\
+           f"Kunning Uzunligi: {kunning_uzunligi}\n"
     return text
 
