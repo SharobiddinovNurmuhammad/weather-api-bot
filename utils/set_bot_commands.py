@@ -8,6 +8,6 @@ async def set_default_commands(dp):
             types.BotCommand("help", "Yordam"),
             types.BotCommand("search", "Qidiruv"),
             types.BotCommand("menu", "Bosh menu"),
-            types.BotCommand("location search", "Joylashuv orqali qidiruv")
+            types.BotCommand("location", "Joylashuv orqali qidiruv")
         ]
     )
