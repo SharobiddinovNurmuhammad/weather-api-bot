@@ -15,12 +15,12 @@ async def search_bot(message: types.Message, state: FSMContext):
 async def get_search(message: types.Message, state: FSMContext):
     search_icon = await bot.send_message(chat_id=message.from_user.id, text='🔍')
     try:
-        await asyncio.sleep(2)
+        await asyncio.sleep(3)
         await search_icon.delete()
         msg = await weathers.weatherbot(message.text)
         await message.reply(msg)
     except:
-        await asyncio.sleep(2)
+        await asyncio.sleep(3)
         await search_icon.delete()
         await message.answer('Natija topilmadi! :)')
     await state.finish()
