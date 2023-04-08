@@ -4,7 +4,7 @@ from keyboards.default.defaultbtn import locationbtn
 from utils import weathers
 from loader import dp
 
-@dp.message_handler(commands='mylocation')
+@dp.message_handler(commands='location')
 async def get_location(message: types.Message):
     await message.answer("Joylashuvingizni yuboring:", reply_markup=locationbtn)
 
